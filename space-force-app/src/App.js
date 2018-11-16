@@ -17,6 +17,7 @@ class App extends Component {
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
+            
             <Nav pullRight>
               <LinkContainer to = "/signup">
                 <NavItem href="/signup">Signup</NavItem>
