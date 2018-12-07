@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-        <Navbar fluid collapseOnSelect>
+        <Navbar fluid collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
               <Link to="/">Space Force</Link>
@@ -19,6 +19,9 @@ class App extends Component {
           <Navbar.Collapse>
             
             <Nav pullRight>
+            <LinkContainer to = "/upload">
+                <NavItem href="/upload">Upload</NavItem>
+              </LinkContainer>
               <LinkContainer to = "/signup">
                 <NavItem href="/signup">Signup</NavItem>
               </LinkContainer>

@@ -11,3 +11,14 @@
   .Home .lander p {
     color: #999;
   }
+
+  .Home .feed {
+    padding: 100px 0;
+    text-align: center
+
+  }
+  .Home .feed h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: black;
+  }
