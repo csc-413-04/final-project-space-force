@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-//import "./upload.css";
+import "./Upload.css";
 import axios from "axios";
 
 export default class Upload extends Component {
@@ -42,4 +41,6 @@ export default class Upload extends Component {
 
         );
     }
+
+    
 }

@@ -19,7 +19,7 @@ const post = () => {
                 <h2>Username12345</h2>
                 </Panel.Heading>
                 <Panel.Body>
-                <img width= {360} height = {360} src="/testimg"/>
+                <img width= {360} height = {360} src="/testimg" alt = 'test' />
                 </Panel.Body>
                 <Panel.Footer>
                 <h5>

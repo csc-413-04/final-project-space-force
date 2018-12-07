@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { Nav, Navbar, NavItem, FormGroup, FormControl, Button,Glyphicon } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
@@ -17,10 +17,19 @@ class App extends Component {
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-            
+
+             <Navbar.Form pullLeft>
+              <FormGroup>
+                <FormControl type="text" placeholder="Search For Users" />
+              </FormGroup>{' '}
+              <Button type="submit">Search</Button>
+            </Navbar.Form>
+
+           
             <Nav pullRight>
+            
             <LinkContainer to = "/upload">
-                <NavItem href="/upload">Upload</NavItem>
+                <NavItem href="/upload"><Glyphicon glyph="plus"/>Upload</NavItem>
               </LinkContainer>
               <LinkContainer to = "/signup">
                 <NavItem href="/signup">Signup</NavItem>
