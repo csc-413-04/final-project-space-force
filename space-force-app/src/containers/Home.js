@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, {Component } from "react";
 import "./Home.css";
 import Post from './Post';
+
+
 
 export default class Home extends Component {
 
@@ -15,7 +17,7 @@ export default class Home extends Component {
         <div className="feed">
           <h1>Feed</h1>
           <hr></hr>
-          <Post />
+          <Post username = "lkuhvfkjehf" description="sdkrbhjkejrahbfwkjhb" />
           <Post />
           <Post />
           <Post />
@@ -24,5 +26,6 @@ export default class Home extends Component {
       </div>
     );
   }
+
 
 }  
