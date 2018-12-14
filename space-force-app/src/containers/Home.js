@@ -2,10 +2,11 @@ import React, {Component } from "react";
 import "./Home.css";
 import Post from './Post';
 import testimg from './testimg.jpg';
+import { connect } from 'react-redux';
 
 
 
-export default class Home extends Component {
+class Home extends Component {
 
 
   render() {
@@ -18,10 +19,8 @@ export default class Home extends Component {
         <div className="feed">
           <h1>Feed</h1>
           <hr></hr>
-          <Post username = "lkuhvfkjehf" description="sdkrbhjkejrahbfwkjhb" image = {testimg}/>
-          <Post />
-          <Post />
-          <Post />
+          <Post username = {this.props.userid} description="sdkrbhjkejrahbfwkjhb" image = {testimg}/>
+          
           
         </div>
       </div>
@@ -29,4 +28,17 @@ export default class Home extends Component {
   }
 
 
-}  
+} 
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+      userid : state.testReducer.userid,
+  };
+};
+
+const mapDispatchToProps = {};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

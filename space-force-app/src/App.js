@@ -4,15 +4,29 @@ import { Nav, Navbar, NavItem, FormGroup, FormControl, Button,Glyphicon } from "
 import { LinkContainer } from "react-router-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
+import { connect } from 'react-redux';
+import {loadUserid} from './redux/actions';
 
 class App extends Component {
+  
+  ComponentDidMount(){
+    this.props.loadUserid('user1');
+    /*axios.get('/api/messages')
+    .then((res) => {
+        console.log(res.data);
+        this.props.loadAllMessages(res.data);
+    }).catch((e) => {
+        console.log(e);
+    });*/
+  }
+
   render() {
     return (
       <div className="App container">
         <Navbar fluid collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Space Force</Link>
+              <Link to="/">Welcome {this.props.userid}</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -46,4 +60,15 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => {
+  return {
+      userid : state.testReducer.userid,
+  };
+};
+
+const mapDispatchToProps = {loadUserid};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
