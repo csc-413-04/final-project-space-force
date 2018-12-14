@@ -39,35 +39,19 @@ public class Main {
 		MongoCollection<Document> picsCollection = db.getCollection("pics");
 
 		Gson gson = new Gson();
-		File uploadDir = new File("upload");
-		uploadDir.mkdir();
 
-		staticFiles.externalLocation("upload");
-
-		get("/api/uploadimage", ((request, response) ->
-				"<form method='post' enctype='multipart/form-data'>" // note the enctype
-						+ "    <input type='image/jpeg' name='uploaded_file' accept='.jpg'>" // make sure to call getPart using the same "name" in the post
-						+ "    <button>Upload picture</button>"
-						+ "</form>"
-		));
+		staticFileLocation("upload");
 
 		post("/api/uploadimage", (request, response) -> {
-			Path temp = Files.createTempFile(uploadDir.toPath(), "", "");
 			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("upload"));
+			Part filepart = request.raw().getPart("image/jpeg");
 
-			Part filePart = null;
-			try {
-				filePart = request.raw().getPart("uploaded_file");
-				InputStream input = filePart.getInputStream();
-				OutputStream output = new FileOutputStream("/temp" + filePart.getSubmittedFileName());
-				IOUtils.copy(input, output);
-				output.close();
-				input.close();
-			} catch (IOException | ServletException e) {
-				e.printStackTrace();
+			try (InputStream inputStream = filepart.getInputStream()) {
+				OutputStream outputStream = new FileOutputStream("upload/" + filepart.getSubmittedFileName());
+				IOUtils.copy(inputStream, outputStream);
+				outputStream.close();
 			}
 
-			logInfo(request, temp);
 			return "lol";
 		});
 	}
