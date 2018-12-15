@@ -19,7 +19,7 @@ const post = (props) => {
                 <h2>{props.username}</h2>
                 </Panel.Heading>
                 <Panel.Body>
-                <img width= {360} height = {360} src={testimg} />
+                <img width= {360} height = {360} src={props.image} />
                 </Panel.Body>
                 <Panel.Footer>
                 <h5>
