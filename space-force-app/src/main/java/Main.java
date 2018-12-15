@@ -43,8 +43,8 @@ public class Main {
 		staticFileLocation("upload");
 
 		post("/api/uploadimage", (request, response) -> {
-			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("upload"));
-			Part filepart = request.raw().getPart("image/jpeg");
+			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("upload/"));
+			Part filepart = request.raw().getPart("uploaded_file");
 
 			try (InputStream inputStream = filepart.getInputStream()) {
 				OutputStream outputStream = new FileOutputStream("upload/" + filepart.getSubmittedFileName());

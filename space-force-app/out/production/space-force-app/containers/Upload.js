@@ -17,7 +17,7 @@ export default class Upload extends Component {
 
     fileUploadHandler = () => {
         const fd = new FormData();
-        fd.append('image/jpeg', this.state.selectedFile, this.state.selectedFile.className);
+        fd.append('yo', this.state.selectedFile, this.state.selectedFile.className);
         axios({
             method: 'POST',
             url: '/api/uploadimage',
