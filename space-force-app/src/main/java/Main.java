@@ -19,14 +19,13 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.sql.Timestamp;
 import java.util.*;
 
 class Image {
 	public String name;
-	public int size;
-	public String type;
-	public int lastModified;
-	public String webkitRelativePath;
+	public String userName;
+	public String url;
 }
 
 public class Main {
@@ -42,7 +41,12 @@ public class Main {
 
 		staticFileLocation("upload");
 
+		Timestamp currentTime = new Timestamp(System.currentTimeMillis());
+
 		post("/api/uploadimage", (request, response) -> {
+			//String body = request.body();
+			//Image data = gson.fromJson(body, Image.class);
+
 			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("upload/"));
 			Part filepart = request.raw().getPart("uploaded_file");
 
@@ -51,6 +55,24 @@ public class Main {
 				IOUtils.copy(inputStream, outputStream);
 				outputStream.close();
 			}
+
+			String time = currentTime.toString();
+			String rename = "upload/" + time;
+			switch (filepart.getContentType()){
+				case "image/jpeg":
+					rename += ".jpg";
+					break;
+				case "image/png":
+					rename += ".png";
+					break;
+				default:
+					System.out.println("Invalid Data Type");
+			}
+
+			File theFile = new File("upload/" + filepart.getSubmittedFileName());
+			File newFile = new File(rename);
+			theFile.renameTo(newFile);
+
 
 			return "lol";
 		});
