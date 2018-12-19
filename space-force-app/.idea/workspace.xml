@@ -4,17 +4,14 @@
     <list default="true" id="cf83ebf8-7d9f-4631-9571-391db2d30050" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/space-force-app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/containers/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/containers/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/containers/Post.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/containers/Post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/containers/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/containers/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/containers/Upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/containers/Upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/main/java/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/main/java/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/main/java/Image.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/space-force-app/main/java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/main/java/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/space-force-app/main/java/WebSocketHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/space-force-app/main/java/WebSocketHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/DSC_0133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebSocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebSocketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/2018-12-15 13:48:24.697.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,38 +28,40 @@
     <session id="-1580684555">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="52" />
-          <entry key="java" value="5" />
+          <entry key="java" value="6" />
+          <entry key="jpg" value="5" />
           <entry key="js" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="52" />
-          <entry key="JAVA" value="5" />
+          <entry key="Image" value="5" />
+          <entry key="JAVA" value="6" />
           <entry key="JavaScript" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2307" />
+          <entry key="java" value="2911" />
           <entry key="js" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2307" />
+          <entry key="JAVA" value="2911" />
           <entry key="JavaScript" value="15" />
         </counts>
       </usages-collector>
@@ -92,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+            <state relative-caret-position="224">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,10 +101,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/Upload.js">
+        <entry file="file://$PROJECT_DIR$/src/main/java/WebSocketHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="390">
+              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,8 +128,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/WebSocketHandler.java" />
         <option value="$PROJECT_DIR$/src/containers/Upload.js" />
+        <option value="$PROJECT_DIR$/src/main/java/WebSocketHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
@@ -148,10 +150,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1590" />
-    <option name="width" value="1622" />
-    <option name="height" value="1732" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="37" />
+    <option name="y" value="23" />
+    <option name="width" value="1403" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -159,7 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -178,7 +180,7 @@
               <item name="space-force-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="space-force-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="space-force-app" type="b2602c69:ProjectViewProjectNode" />
@@ -189,6 +191,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,7 +199,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/lesliezhou/Documents/GitHub/final-project-space-force/space-force-app/src/main/java/Main.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544910657984" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545260434412" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -252,10 +255,10 @@
     <option name="totallyTimeSpent" value="838000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="23" width="1403" height="877" extended-state="0" />
+    <frame x="37" y="23" width="1403" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26451138" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31447464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -295,13 +298,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/WebSocketHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gson-2.8.5.jar!/com/google/gson/internal/JsonReaderInternalAccess.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -509,11 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="653" selection-start-line="653" selection-end-line="653" />
-          <folding>
-            <element signature="e#27026#27027#0" expanded="true" />
-            <element signature="e#28767#28768#0" expanded="true" />
-            <element signature="e#28812#28813#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -524,10 +515,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/upload/2018-12-18 19:35:53.386.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/containers/testimg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/2018-12-18 19:46:53.64.jpg" />
+    <entry file="file://$PROJECT_DIR$/upload/2018-12-19 11:16:13.732.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/2018-12-19 14:55:58.018.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/WebSocketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+        <state relative-caret-position="224">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -6,9 +6,10 @@ import "./App.css";
 import Routes from "./Routes";
 import { connect } from 'react-redux';
 import {loadUserid} from './redux/actions';
+import {Switch, BrowserRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
-  
+
   ComponentDidMount(){
     this.props.loadUserid('user1');
     /*axios.get('/api/messages')
@@ -22,6 +23,7 @@ class App extends Component {
 
   render() {
     return (
+    <Router>
       <div className="App container">
         <Navbar fluid collapseOnSelect fixedTop>
           <Navbar.Header>
@@ -39,9 +41,9 @@ class App extends Component {
               <Button type="submit">Search</Button>
             </Navbar.Form>
 
-           
+
             <Nav pullRight>
-            
+
             <LinkContainer to = "/upload">
                 <NavItem href="/upload"><Glyphicon glyph="plus"/>Upload</NavItem>
               </LinkContainer>
@@ -56,6 +58,7 @@ class App extends Component {
         </Navbar>
         <Routes />
       </div>
+      </Router>
     );
   }
 }
