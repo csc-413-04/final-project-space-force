@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Signup.css";
+import axios from "axios";
+
 
 export default class Signup extends Component {
   constructor(props) {
@@ -28,6 +30,29 @@ export default class Signup extends Component {
   handleSubmit = event => {
     event.preventDefault();
   }
+
+  //Edwin Code for signup
+  signupHandler = () => {
+      const myData = new FormData();
+      const userInfo = {
+          email: this.state.email,
+          username: this.state.username,
+          password: this.state.password
+      };
+      myData.append("myjsonkey", JSON.stringify(userInfo));
+      axios({
+          method: 'POST',
+          url: '/api/signup',
+          data: myData
+      })
+      .then(res => {
+                 console.log(res);
+             }).catch((e) => {
+                 console.log(e);
+             });
+    }
+
+
 
   render() {
     return (
@@ -68,6 +93,7 @@ export default class Signup extends Component {
             />
           </FormGroup>
           <Button
+            onClick={this.signupHandler}
             block
             bsSize="large"
             disabled={!this.validateForm()}

@@ -2,14 +2,14 @@ import React, {Component } from "react";
 import "./Home.css";
 import Post from './Post';
 import testimg from './testimg.jpg';
+import testimg2 from '../upload/testimg.jpg';
 import { connect } from 'react-redux';
-
-
+import { withPrefix } from "react"
 
 class Home extends Component {
 
-
   render() {
+
     return (
       <div className="Home">
         <div className="lander">
@@ -19,9 +19,11 @@ class Home extends Component {
         <div className="feed">
           <h1>Feed</h1>
           <hr></hr>
+
+          <Post username = {this.props.userid} description="sdkrbhjkejrahbfwkjhb" image = {testimg2}/>
+
           <Post username = {this.props.userid} description="sdkrbhjkejrahbfwkjhb" image = {testimg}/>
-          
-          
+
         </div>
       </div>
     );

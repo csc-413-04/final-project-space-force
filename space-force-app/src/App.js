@@ -6,6 +6,9 @@ import "./App.css";
 import Routes from "./Routes";
 import { connect } from 'react-redux';
 import {loadUserid} from './redux/actions';
+//Extra
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 class App extends Component {
   
@@ -22,6 +25,7 @@ class App extends Component {
 
   render() {
     return (
+    <Router>
       <div className="App container">
         <Navbar fluid collapseOnSelect fixedTop>
           <Navbar.Header>
@@ -42,7 +46,7 @@ class App extends Component {
            
             <Nav pullRight>
             
-            <LinkContainer to = "/upload">
+              <LinkContainer to = "/upload">
                 <NavItem href="/upload"><Glyphicon glyph="plus"/>Upload</NavItem>
               </LinkContainer>
               <LinkContainer to = "/signup">
@@ -56,6 +60,7 @@ class App extends Component {
         </Navbar>
         <Routes />
       </div>
+      </Router>
     );
   }
 }

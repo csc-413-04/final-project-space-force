@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Upload.css";
 import axios from "axios";
 import { FormGroup, ControlLabel, FormControl } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+
 
 export default class Upload extends Component {
     constructor(props) {
@@ -77,7 +79,10 @@ export default class Upload extends Component {
                 onChange={this.fileSelectedHandler}
                 ref={fileInput => this.fileInput = fileInput}/>
                 <button onClick={() => this.fileInput.click()}>Choose Picture</button>
+              <LinkContainer to = "/">
                 <button onClick={this.fileUploadHandler}>Upload</button>
+              </LinkContainer>
+
             </div>
 
         );
