@@ -1,22 +1,22 @@
 const initialState = {
     test: 'test value',
-    messages: ['Demo Message'],
+    posts: ['Demo Message'],
     userid: 'Default',
-    
+
 };
 
 
 const testReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'LOAD_MESSAGES':
+        case 'LOAD_POSTS':
             return Object.assign({}, state, {
-                messages: action.messages,
+                posts: action.posts,
         })
-        case 'IMPORT_MESSAGE':
-            const newMessages = state.messages.slice(0);
-            newMessages.unshift(action.message);
+        case 'IMPORT_POST':
+            const newposts = state.posts.slice(0);
+            newposts.unshift(action.post);
             return Object.assign({}, state, {
-                messages: newMessages,
+                posts: newposts,
             })
         case 'LOAD_USERID':
             return Object.assign({}, state, {
@@ -26,7 +26,7 @@ const testReducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 userid: action.userid,
         })
-            
+
         default:
             return state;
     }

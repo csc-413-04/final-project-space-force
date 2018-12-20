@@ -44,15 +44,15 @@ public class Main {
 
 		Gson gson = new Gson();
 
-		staticFileLocation("upload");
+		staticFileLocation("src/upload");
 
 		post("/api/uploadimage", (request, response) -> {
-			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("upload/"));
+			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("src/upload/"));
 			Part filepart = request.raw().getPart("uploaded_file");
 			Timestamp currentTime = new Timestamp(System.currentTimeMillis());
 
 			try (InputStream inputStream = filepart.getInputStream()) {
-				OutputStream outputStream = new FileOutputStream("upload/" + filepart.getSubmittedFileName());
+				OutputStream outputStream = new FileOutputStream("src/upload/" + filepart.getSubmittedFileName());
 				IOUtils.copy(inputStream, outputStream);
 				outputStream.close();
 			}
@@ -85,6 +85,13 @@ public class Main {
 			picsCollection.insertOne(dc);
 			return "lol";
 		});
+
+		path("/api", () ->{
+			get("/urls", (request, response) -> {
+				return gson.toJson(urls);
+			});
+		});
+
 	}
 
 	private static void logInfo(Request req, Path tempFile) throws IOException, ServletException {

@@ -44,9 +44,9 @@ export default class Upload extends Component {
             method: 'POST',
             url: '/api/uploadimage',
             data:fd,
-            //onUpladProgress: ProgressEvent => {
-            //    console.log('Upload Progress: ' + Math.round(ProgressEvent.loaded / ProgressEvent.total* 100 ) + '%' )
-            //}
+            onUpladProgress: ProgressEvent => {
+                console.log('Upload Progress: ' + Math.round(ProgressEvent.loaded / ProgressEvent.total* 100 ) + '%' )
+            }
         }) //in the '' place location to be posted. POST_REQUEST
         .then(res => {
             console.log(res);
