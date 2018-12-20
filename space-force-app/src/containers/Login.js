@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import axios from "axios";
+import { LinkContainer } from "react-router-bootstrap";
 
 
 //To pass the message to main
@@ -95,15 +96,17 @@ export default class Login extends Component {
               type="password"
             />
           </FormGroup>
-          <Button
-            onClick={this.loginHandler}
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
+          <LinkContainer to = "/">
+              <Button
+                onClick={this.loginHandler}
+                block
+                bsSize="large"
+                disabled={!this.validateForm()}
+                type="submit"
+              >
+                Login
+              </Button>
+          </LinkContainer>
         </form>
       </div>
     );

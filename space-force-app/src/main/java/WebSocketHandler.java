@@ -1,4 +1,4 @@
-package spark;
+package main.java;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.*;
 //import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
@@ -34,15 +34,15 @@ public class WebSocketHandler {
 		sessionMap.put(session,session);
 	}
 
-	public static void broadcast(String url){
-		sessionMap.keySet().stream().filter(Session::isOpen).forEach(session -> {
-			try {
-				session.getRemote().sendString(url);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		});
-	}
+//	public static void broadcast(String url){
+//		sessionMap.keySet().stream().filter(Session::isOpen).forEach(session -> {
+//			try {
+//				session.getRemote().sendString(url);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//		});
+//	}
 
 	@OnWebSocketMessage
 	public void message(Session session, String url) throws IOException {

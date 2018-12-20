@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Signup.css";
 import axios from "axios";
+import { LinkContainer } from "react-router-bootstrap";
+
 
 
 export default class Signup extends Component {
@@ -92,15 +94,17 @@ export default class Signup extends Component {
               type="confirmpassword"
             />
           </FormGroup>
-          <Button
-            onClick={this.signupHandler}
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Signup
-          </Button>
+          <LinkContainer to = "/login">
+              <Button
+                onClick={this.signupHandler}
+                block
+                bsSize="large"
+                disabled={!this.validateForm()}
+                type="submit"
+              >
+                Signup
+              </Button>
+          </LinkContainer>
         </form>
       </div>
     );

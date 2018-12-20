@@ -8,6 +8,7 @@ import com.mongodb.ServerCursor;
 import com.mongodb.client.*;
 import org.bson.Document;
 import com.mongodb.MongoClient;
+//import org.eclipse.jetty.websocket.server.WebSocketHandler;
 import spark.Request;
 import spark.utils.IOUtils;
 import sun.nio.ch.IOUtil;
@@ -44,7 +45,7 @@ public class Main {
 		ArrayList<Document> posts = picsCollection.find().into(new ArrayList<>());
 		ArrayList<String> urls = new ArrayList<>();
 
-		for (Document dc : posts){
+		for (Document dc : posts) {
 			urls.add(dc.getString("url"));
 		}
 
@@ -52,15 +53,15 @@ public class Main {
 
 		// Slightly more advanced routing
 		path("/api", () -> {
-			get("/login", (req, res)->{
+			get("/login", (req, res) -> {
 				return "Returning";
 			});
 		});
 
-		post("/api/uploadimage", (request, response) -> {
-			//String body = request.body();
-			//Image data = gson.fromJson(body, Image.class);
-		staticFileLocation("src/upload");
+//		post("/api/uploadimage", (request, response) -> {
+//			//String body = request.body();
+//			//Image data = gson.fromJson(body, Image.class);
+//			staticFileLocation("src/upload");
 
 		post("/api/uploadimage", (request, response) -> {
 			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("src/upload/"));
@@ -75,7 +76,7 @@ public class Main {
 
 			String time = currentTime.toString();
 			String rename = "upload/" + time;
-			switch (filepart.getContentType()){
+			switch (filepart.getContentType()) {
 				case "image/jpeg":
 					rename += ".jpg";
 					break;
@@ -107,8 +108,8 @@ public class Main {
 			String body = req.body().toString();
 			System.out.println(body);
 
-            //Return all pairs of data from request
-            String [] myElements = parserToReturnJsonString(body);
+			//Return all pairs of data from request
+			String[] myElements = parserToReturnJsonString(body);
 
 			//Receive input and parse into the variables below
 			//username is the first param of newuser
@@ -116,29 +117,28 @@ public class Main {
 			//password is the second param of newuser
 			String password = "";
 
-            for (int i = 0; i < myElements.length; i++){
-                String[] mySplitItems = parserToReturnItems(myElements[i]);
-                for (int j = 0; j < mySplitItems.length; j++) {
-                    mySplitItems = parserToReturnItems(myElements[i]);
-                    if (mySplitItems[j].equals("username")) {
-                        username = mySplitItems[j + 1];
-                        System.out.println(username);
+			for (int i = 0; i < myElements.length; i++) {
+				String[] mySplitItems = parserToReturnItems(myElements[i]);
+				for (int j = 0; j < mySplitItems.length; j++) {
+					mySplitItems = parserToReturnItems(myElements[i]);
+					if (mySplitItems[j].equals("username")) {
+						username = mySplitItems[j + 1];
+						System.out.println(username);
 
-                    }
-                    if (mySplitItems[j].equals("password")) {
-                        password = mySplitItems[j + 1];
-                        System.out.println(password);
+					}
+					if (mySplitItems[j].equals("password")) {
+						password = mySplitItems[j + 1];
+						System.out.println(password);
 
-                    }
-                }
-            }
+					}
+				}
+			}
 
-			System.out.print("New user: "+username+" created\n");
+			System.out.print("New user: " + username + " created\n");
 			Document dc = new Document("username", username);
 			List<Document> friends = new ArrayList<Document>();
 			dc.append("username", username).append("password", password).append("friends", friends);
 			usersCollection.insertOne(dc);
-
 
 
 			return "okay";
@@ -151,7 +151,7 @@ public class Main {
 //			System.out.println(body);
 
 			//Return all pairs of data from request
-			String [] myElements = parserToReturnJsonString(body);
+			String[] myElements = parserToReturnJsonString(body);
 
 			//Receive input and parse into the variables below
 			//username is the first param of newuser
@@ -160,22 +160,22 @@ public class Main {
 			//password is the second param of newuser
 			String pw = "";
 
-			for (int i = 0; i < myElements.length; i++){
-                String[] mySplitItems = parserToReturnItems(myElements[i]);
-                for (int j = 0; j < mySplitItems.length; j++) {
-                    mySplitItems = parserToReturnItems(myElements[i]);
-                    if (mySplitItems[j].equals("username")) {
-                        un = mySplitItems[j + 1];
-                        System.out.println(un);
+			for (int i = 0; i < myElements.length; i++) {
+				String[] mySplitItems = parserToReturnItems(myElements[i]);
+				for (int j = 0; j < mySplitItems.length; j++) {
+					mySplitItems = parserToReturnItems(myElements[i]);
+					if (mySplitItems[j].equals("username")) {
+						un = mySplitItems[j + 1];
+						System.out.println(un);
 
-                    }
-                    if (mySplitItems[j].equals("password")) {
-                        pw = mySplitItems[j + 1];
-                        System.out.println(pw);
+					}
+					if (mySplitItems[j].equals("password")) {
+						pw = mySplitItems[j + 1];
+						System.out.println(pw);
 
-                    }
-                }
-            }
+					}
+				}
+			}
 
 			Document user = usersCollection.find(eq("username", un)).first();
 			String rightPassword = user.getString("password");
@@ -184,39 +184,36 @@ public class Main {
 			if (pw.equals(rightPassword)) {
 				token.append("username", un);
 				String currentT = Long.toString(timestamp.getTime());
-				token.append("token", currentTime);
+				token.append("token", currentT);
 				authCollection.insertOne(token);
 				return currentT;
-			}else {
+			} else {
 				return "login_failed";
 			}
 		});
-
-
-		path("/api", () ->{
-			get("/urls", (request, response) -> {
-				return gson.toJson(urls);
-			});
-		});
-
 	}
+//
+//			path("/api", () -> {
+//				get("/urls", (request, response) -> {
+//					return gson.toJson(urls);
+//				});
+//			});
 
-	private static void logInfo(Request req, Path tempFile) throws IOException, ServletException {
-		System.out.println("Uploaded file '" + getFileName(req.raw().getPart("uploaded_file")) + "' saved as '" + tempFile.toAbsolutePath() + "'");
-	}
+		private static void logInfo (Request req, Path tempFile) throws IOException, ServletException {
+			System.out.println("Uploaded file '" + getFileName(req.raw().getPart("uploaded_file")) + "' saved as '" + tempFile.toAbsolutePath() + "'");
+		}
 
 
-	private static String [] parserToReturnJsonString(String s){
-	String [] myNewString = s.split("\\{");
-	String myString = myNewString[1];
-	s = myString.replace("\"", "");;
-	myNewString = s.split("\\}");
-	myString = myNewString[0];
-	return myString.split(",");
-	}
+		private static String[] parserToReturnJsonString (String s){
+			String[] myNewString = s.split("\\{");
+			String myString = myNewString[1];
+			s = myString.replace("\"", "");
+			myNewString = s.split("\\}");
+			myString = myNewString[0];
+			return myString.split(",");
+		}
 
-	public static String[] parserToReturnItems(String s){
-		return s.split(":");
-	}
-
+		public static String[] parserToReturnItems (String s){
+			return s.split(":");
+		}
 }
