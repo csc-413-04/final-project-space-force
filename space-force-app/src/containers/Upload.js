@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import "./Upload.css";
 import axios from "axios";
 import { FormGroup, ControlLabel, FormControl } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-
+import {LinkContainer} from 'react-router-bootstrap';
 
 export default class Upload extends Component {
     constructor(props) {
         super(props);
-    
+
         this.state = {
           username: "",
           comment: ""
@@ -21,7 +20,7 @@ export default class Upload extends Component {
 
     handleChange = event => {
         this.setState({
-            
+
           [event.target.id]: event.target.value
         });
     }
@@ -45,9 +44,9 @@ export default class Upload extends Component {
             method: 'POST',
             url: '/api/uploadimage',
             data:fd,
-            //onUpladProgress: ProgressEvent => {
-            //    console.log('Upload Progress: ' + Math.round(ProgressEvent.loaded / ProgressEvent.total* 100 ) + '%' )
-            //}
+            onUpladProgress: ProgressEvent => {
+                console.log('Upload Progress: ' + Math.round(ProgressEvent.loaded / ProgressEvent.total* 100 ) + '%' )
+            }
         }) //in the '' place location to be posted. POST_REQUEST
         .then(res => {
             console.log(res);
@@ -58,14 +57,14 @@ export default class Upload extends Component {
 
     render(){
         return(
-            
+
             <div className="Upload">
             <div className = "FormData">
                 <form onSubmit={this.handleSubmit}>
                     <FormGroup controlId="username" bsSize="large">
                     <ControlLabel>Username</ControlLabel>
                     <FormControl
-                        autofocus
+                        autoFocus
                         type="username"
                         value={this.state.username}
                         onChange={this.handleChange}
@@ -78,13 +77,12 @@ export default class Upload extends Component {
                 type="file"
                 onChange={this.fileSelectedHandler}
                 ref={fileInput => this.fileInput = fileInput}/>
+
                 <button onClick={() => this.fileInput.click()}>Choose Picture</button>
-              <LinkContainer to = "/">
+                <LinkContainer to = '/'>
                 <button onClick={this.fileUploadHandler}>Upload</button>
-              </LinkContainer>
-
+                </LinkContainer>
             </div>
-
         );
     }
 

@@ -2,6 +2,9 @@ package main.java;
 
 import com.google.gson.JsonObject;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.mongodb.ServerAddress;
+import com.mongodb.ServerCursor;
 import com.mongodb.client.*;
 import org.bson.Document;
 import com.mongodb.MongoClient;
@@ -28,26 +31,24 @@ import java.util.*;
 import java.lang.*;
 import java.util.regex.Pattern;//To split string
 
-class Image {
-	public String name;
-	public String userName;
-	public String url;
-}
-
 public class Main {
 	public static void main(String[] args) {
 		port(1234);
+		webSocket("/ws", WebSocketHandler.class);
 		MongoClient mongoClient = new MongoClient("localhost", 27017);
 		MongoDatabase db = mongoClient.getDatabase("REST3");
 		MongoCollection<Document> usersCollection = db.getCollection("users");
 		MongoCollection<Document> authCollection = db.getCollection("auth");
 		MongoCollection<Document> picsCollection = db.getCollection("pics");
 
+		ArrayList<Document> posts = picsCollection.find().into(new ArrayList<>());
+		ArrayList<String> urls = new ArrayList<>();
+
+		for (Document dc : posts){
+			urls.add(dc.getString("url"));
+		}
+
 		Gson gson = new Gson();
-
-		staticFileLocation("upload");
-
-		Timestamp currentTime = new Timestamp(System.currentTimeMillis());
 
 		// Slightly more advanced routing
 		path("/api", () -> {
@@ -59,9 +60,12 @@ public class Main {
 		post("/api/uploadimage", (request, response) -> {
 			//String body = request.body();
 			//Image data = gson.fromJson(body, Image.class);
+		staticFileLocation("src/upload");
 
-			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("upload/"));
+		post("/api/uploadimage", (request, response) -> {
+			request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("src/upload/"));
 			Part filepart = request.raw().getPart("uploaded_file");
+			Timestamp currentTime = new Timestamp(System.currentTimeMillis());
 
 			try (InputStream inputStream = filepart.getInputStream()) {
 				OutputStream outputStream = new FileOutputStream("src/upload/" + filepart.getSubmittedFileName());
@@ -86,7 +90,15 @@ public class Main {
 			File newFile = new File(rename);
 			theFile.renameTo(newFile);
 
+			urls.add(rename);
+			JsonObject broadcastPost = new JsonObject();
+			broadcastPost.addProperty("type", "POST_BROADCAST");
+			broadcastPost.addProperty("time", time);
+			broadcastPost.addProperty("url", rename);
 
+			WebSocketHandler.broadcast(broadcastPost.toString());
+			Document dc = new Document("url", rename);
+			picsCollection.insertOne(dc);
 			return "lol";
 		});
 
@@ -180,6 +192,12 @@ public class Main {
 			}
 		});
 
+
+		path("/api", () ->{
+			get("/urls", (request, response) -> {
+				return gson.toJson(urls);
+			});
+		});
 
 	}
 

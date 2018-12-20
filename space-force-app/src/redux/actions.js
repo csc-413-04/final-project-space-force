@@ -3,14 +3,14 @@ export const doTest = () => ({
     test: 'some text',
 });
 
-export const loadAllMessages = (messages) => ({
-    type: 'LOAD_MESSAGES',
-    messages,
+export const loadAllPosts = (posts) => ({
+    type: 'LOAD_POSTS',
+    posts,
 });
 
-export const importMessage = (message) => ({
-    type: 'IMPORT_MESSAGE',
-    message,
+export const importPost = (post) => ({
+    type: 'IMPORT_POST',
+    post,
 })
 
 export const loadUserid = (userid) => ({

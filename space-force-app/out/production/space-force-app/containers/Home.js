@@ -1,13 +1,22 @@
 import React, {Component } from "react";
 import "./Home.css";
 import Post from './Post';
-import testimg from './testimg.jpg';
+import testimg from '../upload/testing.jpg';
 import { connect } from 'react-redux';
+import axios from 'axios'
 
 
 
 class Home extends Component {
-
+    componentDidMount(){
+        axios.get('./api/url')
+        .then((res) => {
+            console.log(res.data);
+            this.props.loadAllPosts(res.data);
+        }).catch((e) => {
+            console.log(e);
+        })
+    }
 
   render() {
     return (
@@ -20,15 +29,13 @@ class Home extends Component {
           <h1>Feed</h1>
           <hr></hr>
           <Post username = {this.props.userid} description="sdkrbhjkejrahbfwkjhb" image = {testimg}/>
-          
-          
         </div>
       </div>
     );
   }
 
 
-} 
+}
 
 const mapStateToProps = (state, ownProps) => {
   return {

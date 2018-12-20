@@ -34,15 +34,19 @@ public class WebSocketHandler {
 		sessionMap.put(session,session);
 	}
 
-	@OnWebSocketClose
-	public void closed(Session session, int statusCode, String reason) {
-		System.out.println("A client has disconnected");
-		sessionMap.remove(session);
+	public static void broadcast(String url){
+		sessionMap.keySet().stream().filter(Session::isOpen).forEach(session -> {
+			try {
+				session.getRemote().sendString(url);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		});
 	}
 
 	@OnWebSocketMessage
-	public void message(Session session, String message) throws IOException {
-		System.out.println("Got: $message");
-		session.getRemote().sendString("A message");
+	public void message(Session session, String url) throws IOException {
+		System.out.println("Got: $image");
+		session.getRemote().sendString("a new image");
 	}
 }

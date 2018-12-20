@@ -11,7 +11,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 class App extends Component {
-  
+
   ComponentDidMount(){
     this.props.loadUserid('user1');
     /*axios.get('/api/messages')
@@ -43,7 +43,7 @@ class App extends Component {
               <Button type="submit">Search</Button>
             </Navbar.Form>
 
-           
+
             <Nav pullRight>
             
               <LinkContainer to = "/upload">
