@@ -19,7 +19,7 @@ websocket.onopen = () => {
 websocket.onmessage = (e) => {
     const data = JSON.parse(e.data);
     switch (data.type) {
-        case 'MESSAGE_BROADCAST':
+        case 'POST_BROADCAST':
         
             store.dispatch(importPost(data.url));
             break;

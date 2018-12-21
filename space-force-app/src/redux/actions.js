@@ -1,6 +1,6 @@
 export const doTest = () => ({
-    type: 'SET_TEST',
-    test: 'some text',
+    type: 'POST_BROADCAST',
+
 });
 
 export const loadImage = (image) => ({
@@ -22,3 +22,4 @@ export const loadUserid = (userid) => ({
     type: 'IMPORT_USERID',
     userid,
 });
+
