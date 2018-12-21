@@ -30,7 +30,7 @@ class App extends Component {
         <Navbar fluid collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Welcome {this.props.userid}</Link>
+              <Link to="/">Welcome To Space Force</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

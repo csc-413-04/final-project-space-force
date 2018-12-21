@@ -6,13 +6,21 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import {importPost} from './redux/actions';
 
 const websocket = new WebSocket('ws://localhost:1234/ws');
+var image = new Image();
+var context;
+
+websocket.onopen = () => {
+    console.log('ws has connected')
+}
 
 websocket.onmessage = (e) => {
     const data = JSON.parse(e.data);
     switch (data.type) {
         case 'MESSAGE_BROADCAST':
+        
             store.dispatch(importPost(data.url));
             break;
         default:
