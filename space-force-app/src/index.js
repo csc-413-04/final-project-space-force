@@ -7,6 +7,20 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
+const websocket = new WebSocket('ws://localhost:1234/ws');
+
+websocket.onmessage = (e) => {
+    const data = JSON.parse(e.data);
+    switch (data.type) {
+        case 'MESSAGE_BROADCAST':
+            store.dispatch(importPost(data.url));
+            break;
+        default:
+
+    }
+    console.log(e);
+}
+
 ReactDOM.render(
     <Provider store={store}>
     <Router>

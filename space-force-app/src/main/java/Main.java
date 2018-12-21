@@ -58,7 +58,7 @@ public class Main {
 			}
 
 			String time = currentTime.toString();
-			String rename = "upload/" + time;
+			String rename = "src/upload/" + time;
 			switch (filepart.getContentType()){
 				case "image/jpeg":
 					rename += ".jpg";
@@ -70,14 +70,13 @@ public class Main {
 					System.out.println("Invalid Data Type");
 			}
 
-			File theFile = new File("upload/" + filepart.getSubmittedFileName());
+			File theFile = new File("src/upload/" + filepart.getSubmittedFileName());
 			File newFile = new File(rename);
 			theFile.renameTo(newFile);
 
 			urls.add(rename);
 			JsonObject broadcastPost = new JsonObject();
 			broadcastPost.addProperty("type", "POST_BROADCAST");
-			broadcastPost.addProperty("time", time);
 			broadcastPost.addProperty("url", rename);
 
 			WebSocketHandler.broadcast(broadcastPost.toString());
