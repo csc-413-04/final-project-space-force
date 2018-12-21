@@ -2,107 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c79e136f-04dd-472c-8310-2098685d1ea0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.idea/libraries/com_sparkjava_spark_core_2_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.idea/libraries/org_mongodb_mongodb_driver_3_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/bson-3.9.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/gson-2.8.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-client-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-http-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-io-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-security-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-server-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-servlet-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-util-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-webapp-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/jetty-xml-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/mongodb-driver-3.9.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/mongodb-driver-core-3.9.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/spark-core-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/websocket-api-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/websocket-client-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/websocket-common-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/websocket-server-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/lib/websocket-servlet-9.4.12.v20180830.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/Routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Followers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Followers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Following.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Following.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/NotFound.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/NotFound.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Post.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Signup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Upload.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/Upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/containers/testimg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/main/java/Image.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/main/java/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/main/java/WebSocketHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/redux/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/redux/rootReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/redux/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/redux/testReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/out/production/space-force-app/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/space-force-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/Routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Followers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Followers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Following.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Following.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/NotFound.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/NotFound.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Post.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Signup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Upload.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/Upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/containers/testimg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/main/java/WebSocketHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/redux/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/redux/rootReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/redux/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/redux/testReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-force-app/upload/2018-12-15 13:48:24.697.jpg" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space-force-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/space-force-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space-force-app/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/space-force-app/src/redux/actions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,17 +49,33 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="115398525">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="11" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/space-force-app/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -164,7 +83,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/space-force-app/src/main/java/WebSocketHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="663">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -191,44 +110,46 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-12" />
-    <option name="width" value="981" />
-    <option name="height" value="1092" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1590" />
+    <option name="width" value="1622" />
+    <option name="height" value="1732" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="final-project-space-force" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="final-project-space-force" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="final-project-space-force" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="final-project-space-force" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
               <item name="final-project-space-force" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="final-project-space-force" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="space-force-app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="final-project-space-force" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="final-project-space-force" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="space-force-app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="final-project-space-force" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="final-project-space-force" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="space-force-app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
@@ -236,7 +157,6 @@
             </path>
             <path>
               <item name="final-project-space-force" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="final-project-space-force" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="space-force-app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
@@ -247,17 +167,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545176652135" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/space-force-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -281,7 +200,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.Main" />
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.java.*" />
@@ -308,47 +227,53 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545164929582</updated>
+      <workItem from="1545359727722" duration="236000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="236000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
-    <editor active="true" />
+    <frame x="795" y="0" width="811" height="866" extended-state="0" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38379815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3292517" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33197278" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/space-force-app/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -369,9 +294,7 @@
     <entry file="file://$PROJECT_DIR$/space-force-app/out/production/space-force-app/App.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json" />
     <entry file="file://$PROJECT_DIR$/space-force-app/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -385,20 +308,17 @@
     <entry file="file://$PROJECT_DIR$/space-force-app/src/redux/actions.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/space-force-app/src/main/java/WebSocketHandler.java">
+    <entry file="file://$PROJECT_DIR$/space-force-app/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="177">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/space-force-app/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/space-force-app/src/main/java/WebSocketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="663">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

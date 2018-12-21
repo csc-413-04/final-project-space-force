@@ -39,6 +39,7 @@ class Home extends Component {
 
 }
 
+
 const mapStateToProps = (state, ownProps) => {
   return {
       userid : state.testReducer.userid,

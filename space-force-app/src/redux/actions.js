@@ -1,6 +1,11 @@
 export const doTest = () => ({
-    type: 'SET_TEST',
-    test: 'some text',
+    type: 'POST_BROADCAST',
+
+});
+
+export const loadImage = (image) => ({
+    type: 'LOAD_IMAGE',
+    image,
 });
 
 export const loadAllPosts = (posts) => ({
@@ -11,9 +16,10 @@ export const loadAllPosts = (posts) => ({
 export const importPost = (post) => ({
     type: 'IMPORT_POST',
     post,
-})
+});
 
 export const loadUserid = (userid) => ({
     type: 'IMPORT_USERID',
     userid,
-})
+});
+
