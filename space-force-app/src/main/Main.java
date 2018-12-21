@@ -1,6 +1,5 @@
-package main.java;
+package main;
 
-import com.google.gson.JsonObject;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.mongodb.ServerAddress;
@@ -8,7 +7,6 @@ import com.mongodb.ServerCursor;
 import com.mongodb.client.*;
 import org.bson.Document;
 import com.mongodb.MongoClient;
-//import org.eclipse.jetty.websocket.server.WebSocketHandler;
 import spark.Request;
 import spark.utils.IOUtils;
 import sun.nio.ch.IOUtil;
@@ -26,11 +24,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.*;
-import java.lang.*;
-import java.util.regex.Pattern;//To split string
 
 public class Main {
 	public static void main(String[] args) {
@@ -75,13 +69,8 @@ public class Main {
 			}
 
 			String time = currentTime.toString();
-<<<<<<< HEAD
 			String rename = "src/upload/" + time;
 			switch (filepart.getContentType()){
-=======
-			String rename = "upload/" + time;
-			switch (filepart.getContentType()) {
->>>>>>> 1cdca9a9b36df08a70e7709c110de583820bb96c
 				case "image/jpeg":
 					rename += ".jpg";
 					break;
@@ -101,7 +90,7 @@ public class Main {
 			broadcastPost.addProperty("type", "POST_BROADCAST");
 			broadcastPost.addProperty("url", rename);
 
-			WebSocketHandler.broadcast(broadcastPost.toString());
+			main.WebSocketHandler.broadcast(broadcastPost.toString());
 			Document dc = new Document("url", rename);
 			picsCollection.insertOne(dc);
 			return "lol";
