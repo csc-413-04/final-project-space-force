@@ -6,9 +6,7 @@ import "./App.css";
 import Routes from "./Routes";
 import { connect } from 'react-redux';
 import {loadUserid} from './redux/actions';
-//Extra
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-
+import {Switch, BrowserRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
 
@@ -30,7 +28,7 @@ class App extends Component {
         <Navbar fluid collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Welcome To Space Force</Link>
+              <Link to="/">Welcome {this.props.userid}</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -45,8 +43,8 @@ class App extends Component {
 
 
             <Nav pullRight>
-            
-              <LinkContainer to = "/upload">
+
+            <LinkContainer to = "/upload">
                 <NavItem href="/upload"><Glyphicon glyph="plus"/>Upload</NavItem>
               </LinkContainer>
               <LinkContainer to = "/signup">

@@ -4,7 +4,6 @@ import axios from "axios";
 import { FormGroup, ControlLabel, FormControl } from "react-bootstrap";
 import {LinkContainer} from 'react-router-bootstrap';
 
-
 export default class Upload extends Component {
     constructor(props) {
         super(props);
